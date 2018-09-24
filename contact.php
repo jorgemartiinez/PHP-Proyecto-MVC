@@ -37,6 +37,7 @@ if(isset($_POST['boton']))
 	}
 }
 
+include __DIR__ . '/utils/utils.php';
 require 'views/contact.view.php';
 
 ?>
