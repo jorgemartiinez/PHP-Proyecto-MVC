@@ -1,4 +1,4 @@
-<div id="Category" class="tab-pane <?php echo ($activa == 1)?"active":"lien"; ?>" >
+<div id="<?php echo $categoria; ?>" class="tab-pane <?php echo ($activa == 1)?"active":"lien"; ?>" >
     <div class="row popup-gallery">
         <?php ini_set('display_errors',1);
         foreach ($imagenGaleria as $imagen) { ?>
@@ -9,7 +9,7 @@
                         <div class="head text-center">
                             <ul class="list-inline">
                                 <li>
-                                    <a class="gallery" href="<?php echo $imagen->getUrlGallery(); ?>" alt="" data-toggle="tooltip" data-original-title="Quick View">
+                                    <a class="gallery" href="<?php echo $imagen->getUrlGallery(); ?>" alt="<?php echo $imagen->getNombre(); ?>" data-toggle="tooltip" data-original-title="Quick View">
                                         <i class="fa fa-eye"></i>
                                     </a>
                                 </li>

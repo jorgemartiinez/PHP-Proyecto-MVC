@@ -42,8 +42,8 @@ include_once __DIR__ . '/partials/nav.part.php';
   <!-- Navigation Table Content -->
   <div class="tab-content">
     <?php
-    shuffle($imagenGaleria);
     foreach ($categorias as $categoria => $activa) {
+      shuffle($imagenGaleria);
       include __DIR__ . '/partials/image-gallery-part.php';
     }
     ?>
