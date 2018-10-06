@@ -18,6 +18,8 @@
       <li class="<?php echo esActiva("about.php"); ?>"><a href="about.php"><i class="fa fa-bookmark sr-icons"></i> About</a></li>
       <li class="<?php echo esActiva("blog.php"); ?>"><a href="blog.php"><i class="fa fa-file-text sr-icons"></i> Blog</a></li>
       <li class="<?php echo esActiva("contact.php"); ?>"><a href="contact.php"><i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+      <li class="<?php echo esActiva("galeria.php"); ?>"><a href="galeria.php"><i class="fa fa-image sr-icons"></i> Galeria</a></li>
+      <li class="<?php echo esActiva("associats.php"); ?>"><a href="associats.php"><i class="fa fa-hand-o-right sr-icons lien"></i> Associats</a></li>
     </ul>
   </div>
 </div>

@@ -2,7 +2,11 @@
 
 $problemas = [];
 $cadenaErrores ="";
-
+$nombre = "";
+$apellido= "";
+$asunto= "";
+$mensaje= "";
+$email= "";
 if(isset($_POST['boton']))
 {
 	$nombre = trim(htmlspecialchars($_POST['nombre']));
