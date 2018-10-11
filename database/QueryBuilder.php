@@ -20,13 +20,8 @@ abstract class QueryBuilder{
 
 	public function findAll() : array{
 		$sql = "SELECT * from $this->table";
-		$pdoStatement = $this->connection->prepare($sql);
-
-		if($pdoStatement->execute() === false){
-			throw new QueryException("No se ha podido ejecutar la query solicitada");
-		}
-
-		return $pdoStatement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->classEntity);
+		
+		return $this->executeQuery($sql);
 	}
 
 	public function save(IEntity $entity) : void {
@@ -44,6 +39,29 @@ abstract class QueryBuilder{
 			throw new QueryException("Error al insertar en la base de datos");
 
 		}
+	}
+
+	private function executeQuery(string $sql){
+		
+		$pdoStatement = $this->connection->prepare($sql);
+
+		if($pdoStatement->execute() === false){
+			throw new QueryException("No se ha podido ejecutar la query solicitada");
+		}
+
+		return $pdoStatement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->classEntity);
+	}
+
+	public function find(int $id){
+		$sql = "SELECT * from $this->table WHERE id='$id'";
+
+		$result = $this->executeQuery($sql);
+		
+		if(empty($result)){
+			throw new NotFoundException("No se ha encontrado ningún elemento con id $id");
+		}
+
+		return $result[0];
 	}
 
 }

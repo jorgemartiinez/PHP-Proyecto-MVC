@@ -5,13 +5,14 @@ require_once __DIR__ . '/utils/file.php';
 require_once  __DIR__ .'/exceptions/FileException.php';
 require_once  __DIR__ .'/exceptions/AppException.php';
 require_once  __DIR__ .'/exceptions/QueryException.php';
+require_once  __DIR__ .'/exceptions/ValidationException.php';
 require_once  __DIR__ .'/entity/ImagenGaleria.php';
 require_once  __DIR__ .'/entity/Categoria.php';
-require_once  __DIR__ .'/database/Connection.php ';
+require_once  __DIR__ .'/database/Connection.php';
 require_once  __DIR__ .'/repository/ImagenGaleriaRepository.php';
 require_once  __DIR__ .'/repository/CategoriaRepository.php';
-require_once  __DIR__ .'/database/QueryBuilder.php ';
-require_once  __DIR__ .'/core/App.php ';
+require_once  __DIR__ .'/database/QueryBuilder.php';
+require_once  __DIR__ .'/core/App.php';
 $errores=[];
 $descripcion="";
 $mensajeConfirmacion='';
@@ -21,6 +22,10 @@ try{
 	App::bind('config', $config);
 	$imgRepository = new ImagenGaleriaRepository();
 	$categoriaRepository = new CategoriaRepository();
+
+	$imagenes = $imgRepository->findAll();
+	$categorias = $categoriaRepository->findAll();
+
 	if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 		$tiposAceptados = ['image/jpeg', 'image/png', 'image/gif'];
@@ -41,11 +46,11 @@ try{
 		$imagenGaleria = new ImagenGaleria($imagen->getFileName(), $descripcion, $categoria);
 
 		$imgRepository->save($imagenGaleria);
-		$mensajeConfirmacion = 'Datos Enviados';
 
+		$mensajeConfirmacion = 'Datos Enviados';
+		
+		$imagenes = $imgRepository->findAll();
 	}
-	$imagenes = $imgRepository->findAll();
-	$categorias = $categoriaRepository->findAll();
 
 }
 catch(FileException $fileException)

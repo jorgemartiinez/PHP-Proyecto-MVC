@@ -62,14 +62,16 @@
                       </tr>
                   </thead>
                   <tbody>
-                    <?php foreach ($imagenes as $imagen) :
+                    <?php foreach (($imagenes ?? []) as $imagen) :
                         ?>
                         <tr>
                             <th scope="row"><?= $imagen->getId()?></th>
                             <td>
                                 <img src="<?= $imagen->getUrlGallery()?>" alt="<?= $imagen->getDescripcion()?>" title="<?= $imagen->getDescripcion()?>" width="100px">
+                                
                             </td>
-                            <td><?= $imagen->getCategoria()?></td>
+
+                            <td><?= $imgRepository->getCategoria($imagen)->getNombre()?></td>
                             <td><?= $imagen->getNumVisualizaciones()?></td>
                             <td><?= $imagen->getNumLikes()?></td>
                             <td><?= $imagen->getNumDownloads()?></td>
