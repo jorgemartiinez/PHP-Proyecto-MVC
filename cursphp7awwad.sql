@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2018 a las 12:32:47
+-- Tiempo de generación: 09-10-2018 a las 17:53:09
 -- Versión del servidor: 10.1.36-MariaDB
 -- Versión de PHP: 7.2.10
 
@@ -43,9 +43,18 @@ CREATE TABLE `asociados` (
 
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
-  `numImagenes` int(11) NOT NULL DEFAULT '0'
+  `nombre` varchar(30) NOT NULL,
+  `numImagenes` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `nombre`, `numImagenes`) VALUES
+(1, 'Categoria I', 0),
+(2, 'Categoria II', 0),
+(3, 'Categoria III', 0);
 
 -- --------------------------------------------------------
 
@@ -56,7 +65,7 @@ CREATE TABLE `categorias` (
 CREATE TABLE `imagenes` (
   `id` int(11) NOT NULL,
   `nombre` varchar(30) NOT NULL,
-  `categoria` int(11) NOT NULL DEFAULT '1',
+  `categoria` int(11) NOT NULL,
   `descripcion` varchar(30) NOT NULL,
   `numVisualizaciones` int(3) NOT NULL,
   `numLikes` int(3) NOT NULL,
@@ -100,7 +109,7 @@ ALTER TABLE `categorias`
 --
 ALTER TABLE `imagenes`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `FK_CATEGORIA_IMAGEN` (`categoria`);
+  ADD KEY `categoria` (`categoria`);
 
 --
 -- Indices de la tabla `mensajes`
@@ -119,16 +128,10 @@ ALTER TABLE `asociados`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `categorias`
---
-ALTER TABLE `categorias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `mensajes`
@@ -144,7 +147,7 @@ ALTER TABLE `mensajes`
 -- Filtros para la tabla `imagenes`
 --
 ALTER TABLE `imagenes`
-  ADD CONSTRAINT `FK_CATEGORIA_IMAGEN` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`id`);
+  ADD CONSTRAINT `imagenes_ibfk_1` FOREIGN KEY (`categoria`) REFERENCES `categorias` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

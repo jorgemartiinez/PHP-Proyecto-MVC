@@ -1,14 +1,17 @@
 <?php
 ini_set('display_errors',1);
-
-class ImagenGaleria{
+require_once __DIR__ .'/../database/IEntity.php';
+class ImagenGaleria implements IEntity{
 	
 	const RUTA_IMAGENES_PORTFOLIO = 'images/index/portfolio/';
 	const RUTA_IMAGENES_GALLERY = 'images/index/gallery/'; 
-	/**
+	
+    private  $id;
+    /**
 	 * @var string
 	 */
-	private $nombre;
+
+    private $nombre;
 		/**
 	 * @var string
 	 */
@@ -25,7 +28,10 @@ class ImagenGaleria{
 	 * @var int
 	 */
 		private $numDownloads;
-
+    /**
+     * @var int
+     */
+        private $categoria;
 
 	/**
 	 * Class Constructor
@@ -35,14 +41,16 @@ class ImagenGaleria{
 	 * @param int   $numLikes   
 	 * @param int   $numDownloads   
 	 */
-	public function __construct($nombre, $descripcion, $numVisualizaciones=0, $numLikes=0, $numDownloads=0)
+	public function __construct(string $nombre="", string $descripcion="", int $categoria=0, int $numVisualizaciones=0, int $numLikes=0, int $numDownloads=0)
 	{
-		$this->nombre = $nombre;
-		$this->descripcion = $descripcion;
-		$this->numVisualizaciones = $numVisualizaciones;
-		$this->numLikes = $numLikes;
-		$this->numDownloads = $numDownloads;
-	}
+		$this->id = null;
+        $this->nombre = $nombre;
+        $this->descripcion = $descripcion;
+        $this->categoria = $categoria;
+        $this->numVisualizaciones = $numVisualizaciones;
+        $this->numLikes = $numLikes;
+        $this->numDownloads = $numDownloads;
+    }
 
     /**
      * @return string
@@ -156,6 +164,60 @@ class ImagenGaleria{
     public function getUrlGallery() : string
     {
     	return self::RUTA_IMAGENES_GALLERY. $this->getNombre();
+    }
+
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCategoria()
+    {
+        return $this->categoria;
+    }
+
+    /**
+     * @param mixed $categoria
+     *
+     * @return self
+     */
+    public function setCategoria($categoria)
+    {
+        $this->categoria = $categoria;
+
+        return $this;
+    }
+
+     public function toArray():array
+    {
+        return [
+            'id' => $this->getId(),
+            'nombre' => $this->getNombre(),
+            'categoria'=> $this->getCategoria(),
+            'descripcion' => $this->getDescripcion(),
+            'numVisualizaciones' => $this->getNumVisualizaciones(),
+            'numLikes' => $this->getNumLikes(),
+            'numDownloads'=> $this->getNumDownloads(),
+        ];
     }
 
 }
