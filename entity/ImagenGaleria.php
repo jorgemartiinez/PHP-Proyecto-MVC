@@ -161,25 +161,17 @@ class ImagenGaleria implements IEntity{
     {
     	return self::RUTA_IMAGENES_PORTFOLIO. $this->getNombre();
     }
+
     public function getUrlGallery() : string
     {
     	return self::RUTA_IMAGENES_GALLERY. $this->getNombre();
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function getId()
+    public function getId() 
     {
         return $this->id;
     }
 
-    /**
-     * @param mixed $id
-     *
-     * @return self
-     */
     public function setId($id)
     {
         $this->id = $id;

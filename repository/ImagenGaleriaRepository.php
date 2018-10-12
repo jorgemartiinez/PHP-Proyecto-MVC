@@ -19,4 +19,20 @@ class ImagenGaleriaRepository extends QueryBuilder
 		return $categoriaRepository->find($imagenGaleria->getCategoria());
 	}
 
+	public function guarda(ImagenGaleria $imagenGaleria){
+		
+		$fnGuardaImagen = function () use ($imagenGaleria)
+		{
+			$categoria = $this->getCategoria($imagenGaleria);
+
+			$categoriaRepository = new CategoriaRepository();
+			$categoriaRepository->nuevaImagen($categoria);
+
+			$this->save($imagenGaleria);
+		};
+
+		$this->executeTransaction($fnGuardaImagen);
+	}
+
+
 }

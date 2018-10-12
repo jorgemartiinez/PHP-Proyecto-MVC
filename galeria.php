@@ -45,7 +45,7 @@ try{
 
 		$imagenGaleria = new ImagenGaleria($imagen->getFileName(), $descripcion, $categoria);
 
-		$imgRepository->save($imagenGaleria);
+		$imgRepository->guarda($imagenGaleria);
 
 		$mensajeConfirmacion = 'Datos Enviados';
 		
