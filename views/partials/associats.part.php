@@ -15,7 +15,7 @@
        foreach ($asociadosCambiado as $key => $value) {
         ?>
         <ul class="list-inline">
-          <li><img src=<?=$value->getLogo()?> alt="<?=$value->getDescripcion()?>"></li>
+          <li><img src="<?= $value->getUrlAsociados()?>" alt="<?= $value->getDescripcion()?>" title="<?= $value->getDescripcion()?>" width="100px"></li>
           <li><?=$value->getNombre()?></li>
         </ul>
       <?php }?>

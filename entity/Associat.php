@@ -1,9 +1,12 @@
 <?php 
 ini_set('display_errors',1);
+require_once __DIR__ .'/../database/IEntity.php';
 
-class Associat{
+class Associat implements IEntity{
 
     const RUTA_IMAGENES_ASOCIADOS = 'images/index/associats/';
+
+    private $id;
     private $nombre;
     private $logo;
     private $descripcion;
@@ -15,12 +18,13 @@ class Associat{
 	 * @param    $logo   
 	 * @param    $descripcion   
 	 */
-	public function __construct($nombre, $logo, $descripcion)
+	public function __construct($nombre="", $logo="", $descripcion="")
 	{
-		$this->nombre = $nombre;
-		$this->logo = $logo;
-		$this->descripcion = $descripcion;
-	}
+        $this->id = null;
+        $this->nombre = $nombre;
+        $this->logo = $logo;
+        $this->descripcion = $descripcion;
+    }
 
 
     /**
@@ -86,12 +90,42 @@ class Associat{
 
     	return $this;
     }
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
 
+
+    /**
+     * @param mixed $id
+     *
+     * @return self
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
 
     public function getUrlAsociados() : string
     {
-        return self::RUTA_IMAGENES_ASOCIADOS. $this->getNombre();
+        return self::RUTA_IMAGENES_ASOCIADOS. $this->getLogo();
     }
+
+    public function toArray():array
+    {
+        return [
+            'id' => $this->getId(),
+            'nombre' => $this->getNombre(),
+            'logo'=> $this->getLogo(),
+            'descripcion' => $this->getDescripcion()
+        ];
+    }
+
 
 }
 

@@ -1,5 +1,6 @@
 <?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
-<?php include __DIR__ . '/partials/nav.part.php'; ?>
+<?php include __DIR__ . '/partials/nav.part.php'; 
+?>
 
 <!-- Principal Content Start -->
 <div id="galeria">
@@ -15,8 +16,6 @@
 					<?php 
 					if(empty($nombre)){
 						?>
-						<p style="color: red">
-							<?= $mensajeConfirmacion ?></p>
 							<?php
 						}else{
 							if(empty($errores)) : ?>
@@ -39,20 +38,48 @@
 							</div>
 							
 
-								<label class="label-control">Nombre</label>
-								<input class="form-control" type="text" name="nombre" placeholder="Nombre... Obligatorio">
+							<label class="label-control">Nombre</label>
+							<input class="form-control" type="text" name="nombre" placeholder="Nombre... Obligatorio" required>
 
-								<div class="form-group">
-									<div class="col-xs-12">
-										<label class="label-control">Descripción</label>
-										<textarea class="form-control" name="descripcion" placeholder="Descripción..."><?= $descripcion ?></textarea>
-										<button class="pull-right btn btn-lg sr-button" id="boton">ENVIAR</button>
-									</div>
+							<div class="form-group">
+								<div class="col-xs-12">
+									<label class="label-control">Descripción</label>
+									<textarea class="form-control" name="descripcion" placeholder="Descripción..."><?= $descripcion ?></textarea>
+									<button class="pull-right btn btn-lg sr-button" id="boton">ENVIAR</button>
 								</div>
-							</form>
+							</div>
+						</form>
+						<hr class="divider">
+						<div class="imagen_galeria">
+							<table class="table">
+								<thead>
+									<tr>
+										<th scope="col">#</th>
+										<th scope="col">Imagen</th>
+										<th scope="col">Nombre</th>
+										<th scope="col">Descripción</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<?php foreach (($associats ?? []) as $associat) :
+										?>
+										<tr>
+											<th scope="row"><?= $associat->getId()?></th>
+											<td>
+												<img src="<?= $associat->getUrlAsociados()?>" alt="<?= $associat->getDescripcion()?>" title="<?= $associat->getDescripcion()?>" width="100px">
+
+											</td>
+											<td><?= $associat->getNombre()?></td>
+											<td><?= $associat->getDescripcion()?></td>
+										</tr>
+									<?php endforeach;?>
+								</tbody>
+							</table>
 						</div>
 					</div>
 				</div>
-				<!-- Principal Content Start -->
+			</div>
+			<!-- Principal Content Start -->
 
-				<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>
+			<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>

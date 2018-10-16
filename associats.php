@@ -4,34 +4,58 @@ require_once __DIR__ . '/utils/utils.php';
 require_once __DIR__ . '/utils/file.php';
 require_once  __DIR__ .'/exceptions/FileException.php';
 require_once  __DIR__ .'/entity/Associat.php';
-
+require_once  __DIR__ .'/exceptions/AppException.php';
+require_once  __DIR__ .'/exceptions/QueryException.php';
+require_once  __DIR__ .'/exceptions/ValidationException.php';
+require_once  __DIR__ .'/entity/ImagenGaleria.php';
+require_once  __DIR__ .'/entity/Categoria.php';
+require_once  __DIR__ .'/database/Connection.php';
+require_once  __DIR__ .'/repository/AssociatRepository.php';
+require_once  __DIR__ .'/database/QueryBuilder.php';
+require_once  __DIR__ .'/core/App.php';
 $errores=[];
 $descripcion="";
 $mensajeConfirmacion='';
 $nombre = "";
 
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
-	$nombre = trim(htmlspecialchars($_POST['nombre']));
-	if(empty($nombre)){
-		$mensajeConfirmacion = 'No se han podido enviar las imagenes. Nombre es obligatorio';
+try{
+	$config = require_once 'app/config.php';
+	App::bind('config', $config);
+	$associatRepository = new AssociatRepository();
+
+	$associats = $associatRepository->findAll();
+
+	if($_SERVER['REQUEST_METHOD'] === 'POST'){
+
+		$nombre = trim(htmlspecialchars($_POST['nombre']));
+
+		$tiposAceptados = ['image/jpeg', 'image/png', 'image/gif'];
+		$imagen = new File("imagen", $tiposAceptados);
+
+		$imagen->saveUploadFile(Associat::RUTA_IMAGENES_ASOCIADOS);
+
+		$descripcion = trim(htmlspecialchars($_POST['descripcion']));
+
+		$associat = new Associat($nombre,$imagen->getFileName(), $descripcion);
+
+		$associatRepository->guarda($associat);
+
+		$mensajeConfirmacion = 'Datos Enviados';
+
+		$associats = $associatRepository->findAll();
+
 	}
-	else{
-		try{
-
-			$tiposAceptados = ['image/jpeg', 'image/png', 'image/gif'];
-			$imagen = new File("imagen", $tiposAceptados);
-
-			$imagen->saveUploadFile(Associat::RUTA_IMAGENES_ASOCIADOS);
-
-			$descripcion = trim(htmlspecialchars($_POST['descripcion']));
-
-			$mensajeConfirmacion = 'Datos Enviados';
-		}
-		catch(FileException $fileException)
-		{
-			$errores[] = $fileException->getMessage();
-		}
-	}
+}
+catch(FileException $fileException)
+{
+	$errores[] = $fileException->getMessage();
+}
+catch(QueryException $queryException){
+	$errores[] = $queryException->getMessage();
+}catch(QueryException $appException){
+	$errores[] = $appException->getMessage();
+}catch(ValidationException $validationException){
+	$errores[] = $validationException->getMessage();
 }
 require 'views/associats.view.php';
