@@ -1,18 +1,20 @@
 <?php
 ini_set('display_errors',1);
-require_once __DIR__ . '/utils/utils.php';
-require_once __DIR__ . '/utils/file.php';
-require_once  __DIR__ .'/exceptions/FileException.php';
-require_once  __DIR__ .'/entity/Associat.php';
-require_once  __DIR__ .'/exceptions/AppException.php';
-require_once  __DIR__ .'/exceptions/QueryException.php';
-require_once  __DIR__ .'/exceptions/ValidationException.php';
-require_once  __DIR__ .'/entity/ImagenGaleria.php';
-require_once  __DIR__ .'/entity/Categoria.php';
-require_once  __DIR__ .'/database/Connection.php';
-require_once  __DIR__ .'/repository/AssociatRepository.php';
-require_once  __DIR__ .'/database/QueryBuilder.php';
-require_once  __DIR__ .'/core/App.php';
+
+require_once __DIR__ . '/../../utils/utils.php';
+require_once __DIR__ . '/../../utils/file.php';
+require_once  __DIR__ . '/../../exceptions/FileException.php';
+require_once  __DIR__ . '/../../entity/Associat.php';
+require_once  __DIR__ . '/../../exceptions/AppException.php';
+require_once  __DIR__ . '/../../exceptions/QueryException.php';
+require_once  __DIR__ . '/../../exceptions/ValidationException.php';
+require_once  __DIR__ . '/../../entity/ImagenGaleria.php';
+require_once  __DIR__ . '/../../entity/Categoria.php';
+require_once  __DIR__ . '/../../database/Connection.php';
+require_once  __DIR__ . '/../../repository/AssociatRepository.php';
+require_once  __DIR__ . '/../../database/QueryBuilder.php';
+require_once  __DIR__ . '/../../core/App.php';
+
 $errores=[];
 $descripcion="";
 $mensajeConfirmacion='';
@@ -20,8 +22,7 @@ $nombre = "";
 
 
 try{
-	$config = require_once 'app/config.php';
-	App::bind('config', $config);
+	
 	$associatRepository = new AssociatRepository();
 
 	$associats = $associatRepository->findAll();
@@ -58,4 +59,4 @@ catch(QueryException $queryException){
 }catch(ValidationException $validationException){
 	$errores[] = $validationException->getMessage();
 }
-require 'views/associats.view.php';
+require __DIR__ . '/../views/associats.view.php';

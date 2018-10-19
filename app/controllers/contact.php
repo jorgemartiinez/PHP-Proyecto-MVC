@@ -41,8 +41,8 @@ if(isset($_POST['boton']))
 	}
 }
 
-include __DIR__ . '/utils/utils.php';
-require 'views/contact.view.php';
+require_once __DIR__ . '/../../utils/utils.php';
+require __DIR__ . '/../views/contact.view.php';
 
 ?>
 

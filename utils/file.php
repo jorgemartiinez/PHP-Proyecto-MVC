@@ -1,7 +1,7 @@
 <?php 
+ini_set('display_errors',1);
 
 require_once __DIR__ . '/../exceptions/FileException.php';
-ini_set('display_errors',1);
 
 
 class File
@@ -101,7 +101,7 @@ class File
 
     	$origen = $rutaOrigen . $this->fileName;
     	$destino = $rutaDestino . $this->fileName;
-   
+     
     	if(is_file($origen)===false){
     		throw new FileException("No existe el fichero $origen que estas intentando copiar");
 
