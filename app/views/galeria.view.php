@@ -71,7 +71,7 @@
                                 
                             </td>
 
-                            <td><?= $imgRepository->getCategoria($imagen)->getNombre()?></td>
+                            <td><?= $imagen->getCategoria()?></td>
                             <td><?= $imagen->getNumVisualizaciones()?></td>
                             <td><?= $imagen->getNumLikes()?></td>
                             <td><?= $imagen->getNumDownloads()?></td>

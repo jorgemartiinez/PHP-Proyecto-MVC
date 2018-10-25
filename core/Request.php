@@ -1,4 +1,5 @@
 <?php 
+namespace cursophp7\core;
 
 class Request{
 

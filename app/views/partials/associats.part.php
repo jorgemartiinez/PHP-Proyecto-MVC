@@ -1,5 +1,9 @@
 <!-- Box within partners name and logo -->
+<?php
 
+use cursophp7\app\utils\Utils;
+
+?>
 <div class="last-box row">
   <div class="col-xs-12 col-sm-4 col-sm-push-4 last-block">
     <div class="partner-box text-center">
@@ -11,7 +15,7 @@
       <hr>
       <div class="text-muted text-left">
        <?php 
-       $asociadosCambiado = tresElementos($asociados);
+       $asociadosCambiado = Utils::tresElementos($asociados);
        foreach ($asociadosCambiado as $key => $value) {
         ?>
         <ul class="list-inline">

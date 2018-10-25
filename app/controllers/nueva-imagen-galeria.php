@@ -1,24 +1,17 @@
 <?php 
-ini_set('display_errors',1);
-require_once __DIR__ . '/../../utils/utils.php';
-require_once __DIR__ . '/../../utils/file.php';
-require_once  __DIR__ . '/../../exceptions/FileException.php';
-require_once  __DIR__ . '/../../exceptions/AppException.php';
-require_once  __DIR__ . '/../../exceptions/QueryException.php';
-require_once  __DIR__ . '/../../exceptions/ValidationException.php';
-require_once  __DIR__ . '/../../entity/ImagenGaleria.php';
-require_once  __DIR__ . '/../../entity/Categoria.php';
-require_once  __DIR__ . '/../../database/Connection.php';
-require_once  __DIR__ . '/../../repository/ImagenGaleriaRepository.php';
-require_once  __DIR__ . '/../../repository/CategoriaRepository.php';
-require_once __DIR__ . '/../../database/QueryBuilder.php';
-require_once  __DIR__ . '/../../core/App.php';
-
+namespace cursophp7\app\controllers;
+use cursophp7\core\App;
+use cursophp7\app\utils\File;
+use cursophp7\app\entity\ImagenGaleria;
+use cursophp7\app\exceptions\AppException;
+use cursophp7\app\exceptions\FileException;
+use cursophp7\app\exceptions\QueryException;
+use cursophp7\app\exceptions\ValidationException;
+use cursophp7\app\repository\ImagenGaleriaRepository;
 
 
 try{
 	$descripcion = trim(htmlspecialchars($_POST['descripcion']));
-
 	$categoria = trim(htmlspecialchars($_POST['categoria']));
 
 	if(empty($categoria)){
@@ -27,13 +20,17 @@ try{
 	$tiposAceptados = ['image/jpeg', 'image/png', 'image/gif'];
 	$imagen = new File("imagen", $tiposAceptados);
 
-
 	$imagen->saveUploadFile(ImagenGaleria::RUTA_IMAGENES_GALLERY);
 	$imagen->copyFile(ImagenGaleria::RUTA_IMAGENES_GALLERY, ImagenGaleria::RUTA_IMAGENES_PORTFOLIO);
 	
 	$imagenGaleria = new ImagenGaleria($imagen->getFileName(), $descripcion, $categoria);
-	$imgRepository = new ImagenGaleriaRepository();
+	$imgRepository = App::getRepository(ImagenGaleriaRepository::class);
 	$imgRepository->guarda($imagenGaleria);
+
+	$message = "Se ha guardado una nueva imagen". $imagenGaleria->getNombre();
+	App::get('logger')->add($message);
+
+
 }
 catch(FileException $fileException)
 {
@@ -45,6 +42,8 @@ catch(QueryException $queryException){
 }catch(ValidationException $validationException){
 	die($validationException->getMessage());
 }
-
+catch(AppException $appException){
+	die($appException->getMessage());
+}
 
 App::get('router')->redirect('imagenes-galeria');

@@ -1,4 +1,7 @@
 <?php
+namespace cursophp7\core;
+
+use cursophp7\app\exceptions\NotFoundException;
 ini_set('display_errors',1);
 
 class Router

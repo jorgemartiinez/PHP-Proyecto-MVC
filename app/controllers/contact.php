@@ -1,4 +1,5 @@
 <?php
+namespace cursophp7\app\controllers;
 
 $problemas = [];
 $cadenaErrores ="";
@@ -41,7 +42,7 @@ if(isset($_POST['boton']))
 	}
 }
 
-require_once __DIR__ . '/../../utils/utils.php';
+use cursophp7\app\utils\Utils;
 require __DIR__ . '/../views/contact.view.php';
 
 ?>

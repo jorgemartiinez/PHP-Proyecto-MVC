@@ -1,5 +1,9 @@
 <?php
-require_once __DIR__ .'/../exceptions/AppException.php';
+namespace cursophp7\core;
+
+use cursophp7\core\database\Connection;
+use cursophp7\app\exceptions\AppException;
+
 class App{
 
 	private static $container = [];
@@ -16,7 +20,6 @@ class App{
 		}else{
 			return static::$container[$key];
 		}
-
 	}
 
 	public static function getConnection(){
@@ -24,6 +27,13 @@ class App{
 			static::$container['connection'] = Connection::make();
 		}
 		return static::$container['connection'];
-
 	}
+
+	public static function getRepository(string $className)
+	{
+		if(!array_key_exists($className, static::$container))
+			static::$container[$className] = new $className();		
+		return static::$container[$className];
+	}
+
 }
