@@ -4,13 +4,13 @@ namespace cursophp7\app;
 ini_set('display_errors',1);
 
 
-$router->get('','../app/controllers/index.php');
-$router->get('about','../app/controllers/about.php');
-$router->get('asociados','../app/controllers/associats.php');
-$router->get('blog','../app/controllers/blog.php');
-$router->get('contact','../app/controllers/contact.php');
-$router->get('imagenes-galeria','../app/controllers/galeria.php');
-$router->get('post','../app/controllers/single_post.php');
-$router->post('imagenes-galeria/nueva','../app/controllers/nueva-imagen-galeria.php');
-$router->post('asociados/nueva','../app/controllers/nuevo-asociado.php');
+$router->get('','PagesController@index');
+$router->get('about','PagesController@about');
+$router->get('asociados','AsociadosController@asociado');
+$router->get('blog','PagesController@blog');
+$router->get('contact','PagesController@contact');
+$router->get('imagenes-galeria','ImagenGaleriaController@galeria');
+$router->get('post','PagesController@post');
+$router->post('imagenes-galeria/nueva','ImagenGaleriaController@guardaImagen');
+$router->post('asociados/nueva','AsociadosController@guardaAsociado');
 

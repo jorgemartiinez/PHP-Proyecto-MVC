@@ -8,7 +8,7 @@ use cursophp7\app\exceptions\NotFoundException;
 try{
 	require __DIR__ . '/../core/bootstrap.php';
 
-	require App::get('router')->direct(Request::uri(), Request::method()); 
+	App::get('router')->direct(Request::uri(), Request::method()); 
 
 }catch(NotFoundException $notFoundException){
 	die($notFoundException->getMessage());

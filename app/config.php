@@ -22,5 +22,8 @@ return [
 	],
 	'routes' => [
 		'filename' => 'routes.php'
-	] 	
+	],
+	'project' => [
+		'namespace' => 'cursophp7',
+	]	
 ];
