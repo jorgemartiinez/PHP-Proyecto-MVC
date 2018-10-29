@@ -25,5 +25,14 @@ return [
 	],
 	'project' => [
 		'namespace' => 'cursophp7',
+	],
+	'correo' => [
+		'smtp_server' => 'smtp.gmail.com',
+		'smtp_port' => 587,
+		'smtp_security' => 'tls',
+		'username' => 'jorgemartiinez19@gmail.com',
+		'password' => '',
+		/*'email' => 'jorgemartiinez19@gmail.com',*/
+		'name' => 'Jorge'
 	]	
 ];

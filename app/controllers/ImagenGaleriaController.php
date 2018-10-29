@@ -46,6 +46,16 @@ class ImagenGaleriaController
             $message = "Se ha guardado una nueva imagen" . $imagenGaleria->getNombre();
             App::get('logger')->add($message);
 
+            $mensajeEmail = "Se ha guardado una nueva imagen" . $imagenGaleria->getNombre();
+
+            App::get('mail')->send(
+                'nuevaImagen',
+                'jorgemartiinez19@gmail.com',
+                'Jorge',
+                $mensajeEmail
+            );
+
+
         } catch (FileException $fileException) {
             die($fileException->getMessage());
         } catch (QueryException $queryException) {

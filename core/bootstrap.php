@@ -7,6 +7,7 @@ ini_set('display_errors',1);
 use cursophp7\core\App;
 use cursophp7\core\Router;
 use cursophp7\app\utils\MyLog;
+use cursophp7\app\utils\MyMail;
 
 require __DIR__. '/../vendor/autoload.php';
 
@@ -19,3 +20,6 @@ App::bind('router', $router);
 
 $logger = MyLog::load(__DIR__ . '/../logs/' . $config['logs']['filename']);
 App::bind('logger',$logger);
+
+$mail = MyMail::load($config['correo']);
+App::bind('mail',$mail);
