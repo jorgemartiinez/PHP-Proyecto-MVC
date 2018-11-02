@@ -1,6 +1,7 @@
 <?php
 use cursophp7\app\utils\Utils;
-ini_set('display_errors',1);
+
+ini_set('display_errors', 1);
 
 ?>
 <!-- Navigation Bar -->
@@ -20,11 +21,18 @@ ini_set('display_errors',1);
   <div class="collapse navbar-collapse navbar-right" id="menu">
     <ul class="nav navbar-nav">
       <li class="<?php echo Utils::esActiva("home"); ?>"><a href="/"><i class="fa fa-home sr-icons"></i> Home</a></li>
-      <li class="<?php echo Utils::esActiva("about"); ?>"><a href="about"><i class="fa fa-bookmark sr-icons"></i> About</a></li>
-      <li class="<?php echo Utils::esActiva("blog"); ?>"><a href="blog"><i class="fa fa-file-text sr-icons"></i> Blog</a></li>
-      <li class="<?php echo Utils::esActiva("contact"); ?>"><a href="contact"><i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+      <li class="<?php echo Utils::esActiva("about"); ?>"><a href="/about"><i class="fa fa-bookmark sr-icons"></i> About</a></li>
+      <li class="<?php echo Utils::esActiva("blog"); ?>"><a href="/blog"><i class="fa fa-file-text sr-icons"></i> Blog</a></li>
+      <li class="<?php echo Utils::esActiva("contact"); ?>"><a href="/contact"><i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+      <?php if (is_null($app['user'])) : ?>
+      <li class="<?php echo Utils::esActiva("login"); ?>"><a href="/login"><i class="fa fa-user-secret sr-icons"></i>Login</a></li>
+      <?php else : ?>
       <li class="<?php echo Utils::esActiva("imagenes-galeria"); ?>"><a href="/imagenes-galeria"><i class="fa fa-image sr-icons"></i> Galeria</a></li>
       <li class="<?php echo Utils::esActiva("asociados"); ?>"><a href="asociados"><i class="fa fa-hand-o-right sr-icons lien"></i> Associats</a></li>
+      <li class="<?php echo Utils::esActiva("logout"); ?>"><a href="/logout"><i class="fa fa-sign-out sr-icons"></i> <?= $app['user']->getUsername() ?>  - Salir</a></li>
+
+      
+      <?php endif; ?>
     </ul>
   </div>
 </div>

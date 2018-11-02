@@ -1,5 +1,3 @@
-<?php include __DIR__ . '/partials/inicio-doc.part.php'; ?>
-<?php include __DIR__ . '/partials/nav.part.php'; ?>
 
 <!-- Principal Content Start -->
 <div id="galeria">
@@ -7,22 +5,7 @@
         <div class="col-xs-12 col-sm-8 col-sm-push-2">
             <h1>GALERÍA</h1>
             <hr>
-            <?php if($_SERVER['REQUEST_METHOD'] === 'POST') : ?>
-                <div class="alert alert-<?= empty($errores) ? 'info' : 'danger'; ?> alert-dismissible" role="alert">
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <?php if(empty($errores)) : ?>
-                        <p><?= $mensajeConfirmacion ?></p>
-                        <?php else : ?>
-                            <ul>
-                                <?php foreach($errores as $error) : ?>
-                                    <li><?= $error ?></li>
-                                <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
+            <?php include __DIR__ .'/partials/show-error.part.php'?>
                 <form class="form-horizontal" action="imagenes-galeria/nueva" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <div class="col-xs-12">
@@ -35,7 +18,10 @@
                             <label class="label-control">Categoría</label>
                             <select class="form-control" name="categoria">
                                <?php foreach ($categorias as $categoria) : ?>
-                            <option value="<?= $categoria->getId()?>"> <?= $categoria->getNombre();?></option>
+                            <option 
+                            value="<?= $categoria->getId()?>" 
+                            <?= ($categoriaSeleccionada == $categoria->getId()) ? 'selected' : '' ?>>
+                                <?= $categoria->getNombre() ?></option>
                             <?php endforeach; ?>
                             </select>
                         </div>
@@ -67,7 +53,7 @@
                         <tr>
                             <th scope="row"><?= $imagen->getId()?></th>
                             <td>
-                                <img src="<?= $imagen->getUrlGallery()?>" alt="<?= $imagen->getDescripcion()?>" title="<?= $imagen->getDescripcion()?>" width="100px">
+                                <img src="<?= $imagen->getUrlGallery()?>" alt="<?= $imagen->getDescripcion()?>" title="<?= $imagen->getDescripcion()?>" width="200px">
                                 
                             </td>
 
@@ -85,4 +71,3 @@
 </div>
 <!-- Principal Content Start -->
 
-<?php include __DIR__ . '/partials/fin-doc.part.php'; ?>

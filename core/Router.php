@@ -1,12 +1,13 @@
 <?php
+
 namespace cursophp7\core;
 
+use cursophp7\core\App;
 use cursophp7\app\exceptions\NotFoundException;
-
-ini_set('display_errors', 1);
 
 class Router
 {
+
 	private $routes;
 
 	private function __construct()
@@ -17,53 +18,76 @@ class Router
 		];
 	}
 
-
-	public static function load(string $file)
+	public static function load(string $file) : Router
 	{
 		$router = new Router();
-
 		require $file;
-
 		return $router;
 	}
 
-	public function get(string $uri, string $controller) : void
+	public function get(string $uri, string $controller)
 	{
 		$this->routes['GET'][$uri] = $controller;
 	}
 
-	public function post(string $uri, string $controller) : void
+	public function post(string $uri, string $controller)
 	{
 		$this->routes['POST'][$uri] = $controller;
 	}
 
-
-	public function redirect(string $uri)
+	private function callAction(string $controller, string $action, array $parameters) : bool
 	{
-		header('location: /' . $uri);
+		try {
+			$controller = App::get('config')['project']['namespace'] .
+				'\\app\\controllers\\' . $controller;
+			$objController = new $controller();
+			if (!method_exists($objController, $action))
+				throw new NotFoundException(
+				"El controlador $controller no responde al action $action"
+			);
+			call_user_func_array(array($objController, $action), $parameters);
+			return true;
+		} catch (TypeError $typeError) {
+			return false;
+		}
 	}
 
-	private function callAction(string $controller, string $action)
+	private function getParametersRoute(string $route, array $matches)
 	{
-		$controller = App::get('config')['project']['namespace'] . '\\app\\controllers\\' . $controller;
-		
-		$objController = new $controller();
-
-		if(!method_exists($objController, $action))
-		throw new NotFoundException("el controlador $controller no responde al action $action");
-		
-		$objController->$action();
+		preg_match_all('/:([^\/]+)/', $route, $parameterNames);
+		$parameterNames = array_flip($parameterNames[1]);
+		return array_intersect_key($matches, $parameterNames);
 	}
 
-
-	public function direct(string $uri, string $method) : void
+	private function prepareRoute(string $route) : string
 	{
-		if (!array_key_exists($uri, $this->routes[$method]))
-
-			throw new NotFoundException("No se ha definido la ruta para la uri");
-
-		list($controller, $action) = explode('@', $this->routes[$method][$uri]);
-
-		$this->callAction($controller, $action);
+		$urlRule = preg_replace(
+			'/:([^\/]+)/',
+			'(?<\1>[^/]+)',
+			$route
+		);
+		$urlRule = str_replace('/', '\/', $urlRule);
+		return '/^' . $urlRule . '\/*$/s';
 	}
+
+	public function direct($uri, $method)
+	{
+		foreach ($this->routes[$method] as $route => $controller) {
+			$urlRule = $this->prepareRoute($route);
+			if (preg_match($urlRule, $uri, $matches) === 1) {
+				$parameters = $this->getParametersRoute($route, $matches);
+				list($controller, $action) = explode('@', $controller);
+				if ($this->callAction($controller, $action, $parameters) === true)
+					return;
+			}
+		}
+		throw new NotFoundException('No se ha definido una ruta para esta URI');
+	}
+
+	public function redirect($path)
+	{
+		header('location:/' . $path);
+		exit();
+	}
+
 }

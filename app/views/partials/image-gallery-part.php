@@ -4,7 +4,7 @@
         foreach ($imagenGaleria as $imagen) { ?>
             <div class="col-xs-12 col-sm-6 col-md-3">
                 <div class="sol">
-                    <img class="img-responsive" src="<?php echo $imagen->getUrlPortfolio(); ?>" alt="First category picture">
+                    <img class="img-responsive" src="<?php echo $imagen->getUrlPortfolio(); ?>" alt="First category picture" width="350px">
                     <div class="behind">
                         <div class="head text-center">
                             <ul class="list-inline">

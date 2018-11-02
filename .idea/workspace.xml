@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bfbf475f-aede-4e95-9553-fba6ad2d6bcc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/controllers/ImagenGaleriaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/ImagenGaleriaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/galeria.view.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/galeria.view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/partials/image-gallery-part.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/partials/image-gallery-part.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cursphp7.sql" beforeDir="false" afterPath="$PROJECT_DIR$/cursphp7.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/curso.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/curso.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proyectodaw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1539704275 log3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1539704285 log4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1539704293 log5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1539704303 log4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1540480878 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1540481294 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1540565726 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1540568370 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/1540838630 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/log4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/log5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/associats/Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539339058 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539340038 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539341010 logo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539704316 1539340038 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539704324 logo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539704329 12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539704339 1539340038 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962296 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962564 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962755 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962763 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962796 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962855 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962890 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539962955 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1539964348 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540303236 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540477963 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540477988 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540478022 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540478113 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540478131 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480795 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480837 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480870 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480906 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480961 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480981 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540480985 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540481024 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540481120 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540481123 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540481210 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540481283 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540565122 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540565132 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540568197 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540837269 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540838563 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540913898 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540913978 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540914519 tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540914532 tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1540914541 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1541168436 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1541168480 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/1541170682 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/Dff2A53WAAE61Tf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/Pepeweb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/logo5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/logo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/logo7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/gallery/Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539704316 1539340038 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539704339 1539340038 pinguinos.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962296 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962564 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962755 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962763 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962796 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962855 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962890 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539962955 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1539964348 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540303236 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540477963 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540477988 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540478022 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540478113 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540478131 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540480870 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540480906 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540480961 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540480981 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540480985 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540481024 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540481120 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540481123 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540481210 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540481283 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540565122 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540565132 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540568197 Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540837269 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540838563 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540913898 Ã­ndice2.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540913978 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540914519 tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540914532 tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1540914541 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1541168436 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1541168480 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/1541170682 Cta3a_OXgAEOroQ.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/Dff2A53WAAE61Tf.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/Pepeweb.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/logo5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/logo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/logo7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/tumblr_inline_noziygLwn21tsjcoy_500.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/Ã­ndice.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/index/portfolio/Ã­ndice2.jpeg" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-396877839">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="log" value="1" />
+          <entry key="php" value="45" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Log" value="1" />
+          <entry key="PHP" value="45" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="php" value="62" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PHP" value="62" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/database/IEntity.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/database/QueryBuilder.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/helpers/FlashMessage.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/App.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/bootstrap.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/Request.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/Response.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/core/Router.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-612" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/logs/curso.log">
+          <provider selected="true" editor-type-id="LogFileEditorProvider">
+            <state relative-caret-position="-310" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/app/views/galeria.view.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/image-gallery-part.php" />
+        <option value="$PROJECT_DIR$/app/entity/Categoria.php" />
+        <option value="$PROJECT_DIR$/app/config.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ImagenGaleriaController.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="181" />
+    <option name="y" value="-20" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="partials" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="helpers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="public" type="b2602c69:ProjectViewProjectNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bfbf475f-aede-4e95-9553-fba6ad2d6bcc" name="Default Changelist" comment="" />
+      <created>1541182717396</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1541182717396</updated>
+      <workItem from="1541182721179" duration="3058000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="3058000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17857143" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/views/galeria.view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="55" column="162" selection-start-line="55" selection-start-column="162" selection-end-line="55" selection-end-column="162" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/image-gallery-part.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="134" selection-start-line="6" selection-start-column="134" selection-end-line="6" selection-end-column="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AsociadosController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-27" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/AuthController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="27" column="41" lean-forward="true" selection-start-line="27" selection-start-column="41" selection-end-line="27" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ImagenGaleriaController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="772">
+          <caret line="70" column="14" lean-forward="true" selection-start-line="70" selection-start-column="14" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/PagesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-537" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entity/Associat.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entity/Categoria.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1373">
+          <caret line="83" column="5" lean-forward="true" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/entity/Usuario.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/exceptions/AppException.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/exceptions/AuthenticationException.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/exceptions/FileException.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/repository/AssociatRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/repository/CategoriaRepository.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-775">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/MyLog.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/MyMail.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/utils/Utils.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/error.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layout-with-footer.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/show-imagen-galeria.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/login.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/single_post.view.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/Connection.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/IEntity.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/database/QueryBuilder.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/helpers/FlashMessage.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/App.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Request.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Response.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/core/Router.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-612" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/curso.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-310" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+</project>

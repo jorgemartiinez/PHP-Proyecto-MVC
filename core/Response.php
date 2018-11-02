@@ -2,11 +2,15 @@
 
 namespace cursophp7\core;
 
+use cursophp7\core\App;
+
 class Response{
 
     public static function renderView(string $name, string $layout='layout', array $data=[]){
 
         extract($data);
+
+        $app['user'] = App::get('appUser');
 
         ob_start();
 
